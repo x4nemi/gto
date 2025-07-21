@@ -45,11 +45,11 @@ export default function Home() {
 				</div>
 			</div>
 			<div className='w-full'>
-				<div className="grid grid-cols-12 w-full">
-					<div className="col-span-4">
+				<div className="grid grid-cols-12 w-full gap-4">
+					<div className="col-span-5">
 						<Filters />
 					</div>
-					<div className="col-span-8">
+					<div className="col-span-7">
 						<EventList />
 					</div>
 				</div>

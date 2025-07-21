@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["./globals.d.ts"],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -22,6 +23,15 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/**/*",
+    "*.d.ts",
+    "src/*.d.ts",
+    "custom-elements.d.ts"
+  ],
   "exclude": ["node_modules"]
 }
