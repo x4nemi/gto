@@ -8,8 +8,8 @@ export default function Home() {
 		{ name: "Contacto", href: "#", current: false }
 	];
 	return (
-		<main className="flex min-h-screen flex-col items-center p-8">
-			<div className="navbar bg-base-100">
+		<main className="flex min-h-screen flex-col items-center p-8 bg-sky-50">
+			<div className="navbar bg-base-100 shadow-sm mb-5 rounded-full">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
