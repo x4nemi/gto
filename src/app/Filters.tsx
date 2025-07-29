@@ -26,16 +26,16 @@ export const Filters = () => {
                             Horizontal Slider 2 Streamline Icon: https://streamlinehq.com
                         </desc>
                         <g id="horizontal-slider-2--adjustment-adjust-controls-fader-horizontal-settings-slider">
-                            <path id="Vector" d="M1 2.28125c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.54 1.5 -1.5 -0.54 -1.5 -1.5 -1.5 -1.5 0.54 -1.5 1.5Z" stroke-width="1"></path>
-                            <path id="Vector_2" d="M10 11.7187c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.5399 1.5 -1.4999c0 -0.9601 -0.54 -1.5001 -1.5 -1.5001s-1.5 0.54 -1.5 1.5Z" stroke-width="1"></path>
-                            <path id="Vector_3" d="M5.52368 7c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.54 1.5 -1.5 -0.54 -1.5 -1.5 -1.5 -1.5 0.54 -1.5 1.5Z" stroke-width="1"></path>
-                            <path id="Vector_4" stroke-linecap="round" stroke-linejoin="round" d="M1 2.28125c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.54 1.5 -1.5 -0.54 -1.5 -1.5 -1.5 -1.5 0.54 -1.5 1.5Z" stroke-width="1"></path>
-                            <path id="Vector_5" stroke-linecap="round" stroke-linejoin="round" d="M10 11.7187c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.5399 1.5 -1.4999c0 -0.9601 -0.54 -1.5001 -1.5 -1.5001s-1.5 0.54 -1.5 1.5Z" stroke-width="1"></path>
-                            <path id="Vector_6" stroke-linecap="round" stroke-linejoin="round" d="M5.52368 7c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.54 1.5 -1.5 -0.54 -1.5 -1.5 -1.5 -1.5 0.54 -1.5 1.5Z" stroke-width="1"></path>
-                            <path id="Vector_7" stroke-linecap="round" stroke-linejoin="round" d="M1 7h4.5" stroke-width="1"></path>
-                            <path id="Vector_8" stroke-linecap="round" stroke-linejoin="round" d="M1 11.7188h9" stroke-width="1"></path>
-                            <path id="Vector_9" stroke-linecap="round" stroke-linejoin="round" d="M8.5 7H13" stroke-width="1"></path>
-                            <path id="Vector_10" stroke-linecap="round" stroke-linejoin="round" d="M13 2.28125H4" stroke-width="1"></path>
+                            <path id="Vector" d="M1 2.28125c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.54 1.5 -1.5 -0.54 -1.5 -1.5 -1.5 -1.5 0.54 -1.5 1.5Z" strokeWidth="1"></path>
+                            <path id="Vector_2" d="M10 11.7187c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.5399 1.5 -1.4999c0 -0.9601 -0.54 -1.5001 -1.5 -1.5001s-1.5 0.54 -1.5 1.5Z" strokeWidth="1"></path>
+                            <path id="Vector_3" d="M5.52368 7c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.54 1.5 -1.5 -0.54 -1.5 -1.5 -1.5 -1.5 0.54 -1.5 1.5Z" strokeWidth="1"></path>
+                            <path id="Vector_4" strokeLinecap="round" strokeLinejoin="round" d="M1 2.28125c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.54 1.5 -1.5 -0.54 -1.5 -1.5 -1.5 -1.5 0.54 -1.5 1.5Z" strokeWidth="1"></path>
+                            <path id="Vector_5" strokeLinecap="round" strokeLinejoin="round" d="M10 11.7187c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.5399 1.5 -1.4999c0 -0.9601 -0.54 -1.5001 -1.5 -1.5001s-1.5 0.54 -1.5 1.5Z" strokeWidth="1"></path>
+                            <path id="Vector_6" strokeLinecap="round" strokeLinejoin="round" d="M5.52368 7c0 0.96 0.54 1.5 1.5 1.5s1.5 -0.54 1.5 -1.5 -0.54 -1.5 -1.5 -1.5 -1.5 0.54 -1.5 1.5Z" strokeWidth="1"></path>
+                            <path id="Vector_7" strokeLinecap="round" strokeLinejoin="round" d="M1 7h4.5" strokeWidth="1"></path>
+                            <path id="Vector_8" strokeLinecap="round" strokeLinejoin="round" d="M1 11.7188h9" strokeWidth="1"></path>
+                            <path id="Vector_9" strokeLinecap="round" strokeLinejoin="round" d="M8.5 7H13" strokeWidth="1"></path>
+                            <path id="Vector_10" strokeLinecap="round" strokeLinejoin="round" d="M13 2.28125H4" strokeWidth="1"></path>
                         </g>
                     </svg>
                     Filtros</h1>
