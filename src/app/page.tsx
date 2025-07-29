@@ -25,7 +25,12 @@ export default function Home() {
 							}
 						</ul>
 					</div>
-					<a className="btn btn-ghost text-xl">Cuevanense</a>
+					<div className="avatar px-2">
+						<div className="w-10 rounded-full">
+							<img src="/montana.png" alt="Logo Cuevanense" />
+						</div>
+					</div>
+					<a className="font-semibold text-xl">Cuevanense</a>
 				</div>
 				<div className="navbar-center hidden lg:flex">
 					<ul className="menu menu-horizontal px-1">
