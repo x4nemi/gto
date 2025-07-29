@@ -25,7 +25,7 @@ export default function Home() {
 							}
 						</ul>
 					</div>
-					<a className="btn btn-ghost text-xl">Ocío Cuevanense</a>
+					<a className="btn btn-ghost text-xl">Cuevanense</a>
 				</div>
 				<div className="navbar-center hidden lg:flex">
 					<ul className="menu menu-horizontal px-1">

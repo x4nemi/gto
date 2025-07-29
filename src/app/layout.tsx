@@ -25,8 +25,17 @@ const quattrocento = Quattrocento({
 });
 
 export const metadata: Metadata = {
-	title: "Ocío Cuevanense",
+	title: "Cuevanense",
 	description: "Creada por y para Guanajuatenses",
+	icons: {
+		icon: [
+			{ url: "/favicon.ico", sizes: "any" },
+			{ url: "/montana.png", sizes: "32x32", type: "image/png" },
+			{ url: "/montana.png", sizes: "16x16", type: "image/png" },
+		],
+		shortcut: "/favicon.ico",
+		apple: "/montana.png",
+	},
 };
 
 export default function RootLayout({
@@ -37,7 +46,7 @@ export default function RootLayout({
 	return (
 		<html lang="es">
 			<body
-				className={`${quattrocento.variable} ${quattrocentoSans.variable} antialiased`}			>
+				className={`${quattrocento.variable} ${quattrocentoSans.variable} antialiased`}>
 				{children}
 			</body>
 		</html>
