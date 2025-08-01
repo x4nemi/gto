@@ -49,7 +49,7 @@ export const EventCard = (props : EventCardProps) => {
 
     const [openSiteModal, setOpenSiteModal] = useState(false)
     return (
-        <div className="card card-lg card-border rounded-4xl border-neutral-300 max-md:w-full min-md:w-max-96 mt-2" >
+        <div className="card card-lg card-border rounded-4xl border-neutral-300 max-md:w- min-md:w-max-96 mt-2" >
             <div className='relative'>
                 <div className="absolute top-4 left-4 z-10 rounded-3xl">
                     <button className='btn btn-soft btn-sm rounded-tl-3xl text-neutral-800 shadow-lg shadow-neutral-500/50' onClick={() => setOpenSiteModal(true)}>

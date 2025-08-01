@@ -12,7 +12,7 @@ export const EventList = () => {
 			price: "80",
 			igLink: 'https://www.instagram.com/escarola.gto',
 			fbLink: 'https://www.facebook.com/escarolagto',
-			date: "2025-07-31, 9:00 PM",
+			date: "9:00 PM",
 			location: "Escarola",
 			locationLink: "https://maps.app.goo.gl/TPm7G55qyhHFRwkq8",
 		},
@@ -24,7 +24,7 @@ export const EventList = () => {
 			price: "80",
 			igLink: 'https://www.instagram.com/escarola.gto',
 			fbLink: 'https://www.facebook.com/escarolagto',
-			date: "2025-07-31, 9:00 PM",
+			date: "9:00 PM",
 			location: "Escarola",
 			locationLink: "https://maps.app.goo.gl/TPm7G55qyhHFRwkq8",
 		}
@@ -43,7 +43,7 @@ export const EventList = () => {
 					</svg>
 					Eventos
 				</h2>
-				<div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4'>
+				<div className='grid xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-1 gap-4'>
 					{cards.map((card) => (
 						<EventCard key={card.id} {...card} />
 					))}
