@@ -17,3 +17,6 @@
 - Página de contacto
   - [ ] Página de contacto
   - [ ] Donaciones
+
+
+- Cuenta como evento cultural tag
