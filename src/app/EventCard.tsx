@@ -1,55 +1,18 @@
 "use client";
 import { useState } from "react"
-import { Interface } from "readline";
 import { SiteModal } from "./SiteModal";
+import { EventCardProps } from "@/interfaces/EventInterface";
 
-interface EventCardProps {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    price: string;
-    igLink: string;
-    fbLink: string;
-    date: string;
-    location: string;
-    locationLink: string;
-}
+export const EventCard = (props: EventCardProps) => {
+    const { title, description, image, price, igLink, fbLink, date, hour, location, locationLink } = props;
+    const today = new Date();
 
-export const EventCard = (props : EventCardProps) => {
-    const { title, description, image, price, igLink, fbLink, date, location, locationLink } = props;
-    const cards = [
-        {
-            id: 1,
-            title: "Noche de Pop Rock",
-            description: "Disfruta de una noche llena de buena música y diversión.",
-            image: "/nocherock.jpg",
-            price: "80",
-            igLink: 'https://www.instagram.com/escarola.gto',
-            fbLink: 'https://www.facebook.com/escarolagto',
-            date: "2025-07-31, 9:00 PM",
-            location: "Escarola",
-            locationLink: "https://maps.app.goo.gl/TPm7G55qyhHFRwkq8",
-
-        },
-        {
-            id: 2,
-            title: "Noche de Pop Rock",
-            description: "Disfruta de una noche llena de buena música y diversión.",
-            image: "/nocherock.jpg",
-            price: "80",
-            igLink: 'https://www.instagram.com/escarola.gto',
-            fbLink: 'https://www.facebook.com/escarolagto',
-            date: "2025-07-31, 9:00 PM",
-            location: "Escarola",
-            locationLink: "https://maps.app.goo.gl/TPm7G55qyhHFRwkq8",
-
-        }
-    ]
+    const [isEventPast, setIsEventPast] = useState(today > new Date(date));
+    console.log("Is event past:", isEventPast);
 
     const [openSiteModal, setOpenSiteModal] = useState(false)
     return (
-        <div className="card card-lg card-border rounded-4xl border-neutral-300 max-md:w- min-md:w-max-96 mt-2" >
+        <div className={`card card-lg card-border rounded-4xl border-neutral-300 max-md:w- min-md:w-max-96 mt-2 ${isEventPast ? "bg-neutral-100" : ""}`}>
             <div className='relative'>
                 <div className="absolute top-4 left-4 z-10 rounded-3xl">
                     <button className='btn btn-soft btn-sm rounded-tl-3xl text-neutral-800 shadow-lg shadow-neutral-500/50' onClick={() => setOpenSiteModal(true)}>
@@ -60,12 +23,12 @@ export const EventCard = (props : EventCardProps) => {
                         {location}
                     </button>
                 </div>
-                <div className="dropdown dropdown-center absolute top-4 right-4 z-10">
-                    <button tabIndex={0} className='btn btn-soft btn-sm rounded-tr-3xl text-neutral-800 shadow-lg shadow-neutral-500/50'>
+                {!isEventPast ? <div className="dropdown dropdown-center absolute top-4 right-4 z-10">
+                    <button tabIndex={0} className='btn btn-soft btn-sm rounded-tr-3xl text-neutral-800 shadow-lg shadow-neutral-500/50' disabled={isEventPast}>
                         <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
-                        {date}
+                        {hour}
                     </button>
                     <ul tabIndex={0} className="dropdown-content mt-1 menu bg-base-100 rounded-box z-1 p-2 shadow-sm w-36">
                         <div className='text-xs py-2 text-center'>
@@ -88,19 +51,25 @@ export const EventCard = (props : EventCardProps) => {
                             Otro
                         </a></li>
                     </ul>
-                </div>
+                </div> :
+                    <span className="absolute top-4 right-4 z-10 bg-red-100 text-red-800 btn btn-soft btn-sm rounded-tr-3xl shadow-lg shadow-red-500/50">
+                        <span className="w-2 h-2 me-1 bg-red-500 rounded-full"></span>
+                        Evento pasado
+                    </span>
+                }
+
             </div>
             <div className='px-2 pt-2 rounded-3xl drop-shadow-2xl'>
                 <img
                     src={image}
                     alt="Event"
-                    className="rounded-4xl object-cover"
+                    className={`rounded-4xl object-cover ${isEventPast ? "grayscale" : ""}`}
                 />
             </div>
             <div className='card-body pt-3'>
                 <div className='justify-between flex items-center gap-0'>
-                    <div className='card-title font-neuton italic text-3xl text-neutral-800'>{title}</div>
-                    <div className="badge badge-soft badge-lg bg-pink-100 text-pink-600 badge-outline border-0 font-semibold text-md gap-1 rounded-lg">
+                    <div className={`card-title font-neuton italic text-3xl ${isEventPast ? "text-neutral-500" : "text-neutral-800"}`}>{title}</div>
+                    <div className={`badge badge-soft badge-lg badge-outline border-0 font-semibold text-md gap-1 rounded-lg ${isEventPast ? "bg-neutral-200 text-neutral-500" : "bg-pink-100 text-pink-600"}`}>
                         <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2" />
                         </svg>
@@ -108,7 +77,7 @@ export const EventCard = (props : EventCardProps) => {
                     </div>
 
                 </div>
-                <p className='text-neutral-500 text-md'>{description}</p>
+                <p className={`text-md ${isEventPast ? "text-neutral-400" : "text-neutral-500"}`}>{description}</p>
             </div>
             <SiteModal openSiteModal={openSiteModal} setOpenSiteModal={setOpenSiteModal} />
         </div>
