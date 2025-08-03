@@ -8,7 +8,7 @@ export const EventCard = (props: EventCardProps) => {
     const today = new Date();
 
     const [isEventPast, setIsEventPast] = useState(today > new Date(date));
-    console.log("Is event past:", isEventPast);
+    // console.log("Is event past:", isEventPast);
 
     const [openSiteModal, setOpenSiteModal] = useState(false)
     return (
@@ -53,13 +53,13 @@ export const EventCard = (props: EventCardProps) => {
                     </ul>
                 </div> :
                     <span className="absolute top-4 right-4 z-10 bg-red-100 text-red-800 btn btn-soft btn-sm rounded-tr-3xl shadow-lg shadow-red-500/50">
-                        <span className="w-2 h-2 me-1 bg-red-500 rounded-full"></span>
+                        <div aria-label="error" className="status status-error"></div>
                         Evento pasado
                     </span>
                 }
 
             </div>
-            <div className='px-2 pt-2 rounded-3xl drop-shadow-2xl'>
+            <div className='px-2 pt-2 rounded-4xl drop-shadow-2xl'>
                 <img
                     src={image}
                     alt="Event"

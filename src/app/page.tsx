@@ -1,5 +1,6 @@
 import { EventList } from "./EventList";
 import { Filters } from "./Filters";
+import { Pared } from "./Pared";
 
 export default function Home() {
 	const tabs = [
@@ -8,7 +9,7 @@ export default function Home() {
 		{ name: "Contacto", href: "#", current: false }
 	];
 	return (
-		<main className="flex min-h-screen flex-col items-center p-8 bg-sky-50">
+		<main className="flex min-h-screen flex-col items-center p-8 ">
 			<div className="navbar bg-base-100 shadow-sm mb-5 rounded-full">
 				<div className="navbar-start">
 					<div className="dropdown">
@@ -55,7 +56,7 @@ export default function Home() {
 						<Filters />
 					</div>
 					<div className="w-full flex-1">
-						<EventList />
+						<Pared />
 					</div>
 				</div>
 			</div>

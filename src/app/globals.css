@@ -6,8 +6,7 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f0f0f0;
 }
 
 @theme inline {
@@ -29,7 +28,12 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  /* background: var(--background); */
+
+  background-image: url('/texture.jpg');
+  background-size: cover;
+  background-color: #e7e5e4;
+  background-blend-mode: overlay;
+  /* color: var(--foreground); */
   font-family: 'var(--font-sans)', sans-serif;
 }
