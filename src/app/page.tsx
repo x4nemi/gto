@@ -51,7 +51,7 @@ export default function Home() {
 				</div>
 			</div>
 			<div className='w-full'>
-				<div className="flex flex-col min-lg:flex-row w-full gap-4 lg:px-3">
+				<div className="flex flex-col lg:flex-row xl:flex-row w-full gap-4 lg:px-3">
 					<div className="w-full lg:w-auto min-w-sm">
 						<Filters />
 					</div>

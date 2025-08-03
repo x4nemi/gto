@@ -60,9 +60,8 @@ export const EventList = () => {
 					</svg>
 					Eventos
 				</h2>
-				<div className='grid xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-1 gap-4'>
+				<div className='grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-4'>
 					{cards.map((card) => (
-						// <EventCard key={card.id} {...card} />
 						<Card key={card.id} {...card} />
 					))}
 				</div>
