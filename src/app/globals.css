@@ -34,3 +34,9 @@ body {
   background-blend-mode: overlay;
   font-family: 'var(--font-sans)', sans-serif;
 }
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
