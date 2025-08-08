@@ -2,14 +2,14 @@
 import Navbar from "@/components/Navbar";
 
 export default function ClientLayout({
-  children
+    children
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <>
-      <Navbar />
-      {children}
-    </>
-  );
+    return (
+        <>
+            <Navbar />
+            {children}
+        </>
+    );
 }
