@@ -38,6 +38,8 @@ export const metadata: Metadata = {
 	},
 };
 
+import ClientLayout from "@/components/ClientLayout";
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -47,7 +49,11 @@ export default function RootLayout({
 		<html lang="es">
 			<body
 				className={`${quattrocento.variable} ${quattrocentoSans.variable} antialiased`}>
-				{children}
+				<main className="flex min-h-screen flex-col items-center p-8">
+					<ClientLayout>
+						{children}
+					</ClientLayout>
+				</main>
 			</body>
 		</html>
 	);
