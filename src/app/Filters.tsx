@@ -1,6 +1,7 @@
 "use client"
 // eslint-disable @typescript-eslint/no-explicit-any
 import { useEffect, useState } from "react";
+import CalendarRange from "@/components/comp-42";
 
 export const Filters = () => {
     const [startDate, setStartDate] = useState<Date>(new Date())
@@ -29,14 +30,15 @@ export const Filters = () => {
             <div className="card-body">
                 <h1 className="text-xl font-semibold">Filtros</h1>
                 {/* Calendar */}
-                <div className="rounded-lg bg-neutral-100 p-4 ">
+                {/* <div className="rounded-lg bg-neutral-100 p-4 ">
                     <p className="text-neutral-400 text-sm font-extrabold uppercase mb-2">Rango de fechas</p>
                     <div className="flex gap-3 items-center">
                         <input type="date" className="input" value={startDate.toISOString().split('T')[0]} onChange={(e) => setStartDate(new Date(e.target.value))} />
                         { '—' }
                         <input type="date" className="input" value={endDate.toISOString().split('T')[0]} onChange={(e) => setEndDate(new Date(e.target.value))} />
                     </div>
-                </div>
+                </div> */}
+                <CalendarRange />
                 {/* Info */}
                 <div className="rounded-lg bg-neutral-100 p-4">
                     <p className="text-neutral-400 text-sm font-extrabold uppercase">Anclar info</p>
